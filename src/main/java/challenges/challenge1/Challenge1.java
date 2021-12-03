@@ -1,11 +1,12 @@
 package challenges.challenge1;
 
+import interfaces.ChallengeBasics;
 import models.FileHandler;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Challenge1 {
+public class Challenge1 implements ChallengeBasics {
     String pathexample = "src/main/java/challenges/challenge1/example.txt";
     String pathchallenge = "src/main/java/challenges/challenge1/challenge.txt";
     FileHandler fileHandler;
@@ -21,6 +22,7 @@ public class Challenge1 {
         }
     }
 
+    @Override
     public void part1(Boolean isTestingExample){
         setFilePath(isTestingExample);
         List<String> thedata = this.fileHandler.readFile();
@@ -40,6 +42,7 @@ public class Challenge1 {
         }
     }
 
+    @Override
     public void part2(Boolean isTestingExample){
         setFilePath(isTestingExample);
         List<String> thedata = this.fileHandler.readFile();

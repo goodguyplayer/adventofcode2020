@@ -1,11 +1,12 @@
 package challenges.challenge2;
 
+import interfaces.ChallengeBasics;
 import models.FileHandler;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Challenge2 {
+public class Challenge2 implements ChallengeBasics {
     String pathexample = "src/main/java/challenges/challenge2/example.txt";
     String pathchallenge = "src/main/java/challenges/challenge2/challenge.txt";
     FileHandler fileHandler;
@@ -65,6 +66,7 @@ public class Challenge2 {
         return false;
     }
 
+    @Override
     public void part1(Boolean isTestingExample){
         setFilePath(isTestingExample);
         String[] splititems;
@@ -82,6 +84,7 @@ public class Challenge2 {
 
     }
 
+    @Override
     public void part2(Boolean isTestingExample){
         setFilePath(isTestingExample);
         String[] splititems;
